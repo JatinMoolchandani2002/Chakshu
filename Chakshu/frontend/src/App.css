@@ -1,0 +1,91 @@
+/* custom scrollbar 1 */
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c6c4c4;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  width: 26px;
+  border-radius: 20px;
+  border: 6px solid black;
+  background-clip: content-box;
+}
+
+.opacity-bg {
+  opacity: 70%;
+}
+
+.opacity-bg-map {
+  opacity: 30%;
+}
+
+.shim-red {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(236, 174, 174, 0.9);
+}
+.shim-red::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgb(255, 0, 0) 0,
+    rgba(255, 0, 0, 0.9) 50%,
+    rgba(255, 0, 0, 0.8) 100%
+  );
+  animation: shimmer 1s ease-out infinite;
+  content: "";
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 110%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#faca15, #faca15)
+}
+
+.link-underline-white {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#0063c5, #0063c5)
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 110%;
+}
+
+.border-custom-dark {
+  border: 5px solid rgb(125,185,153);
+  border-image: linear-gradient(to bottom, rgba(9, 202, 67, 0) 75%,#fdba85 75%,#fdba85 100%,rgba(12, 182, 63, 0) 100%);
+  border-image-slice: 1;
+}
+
+.border-custom-light {
+  border: 6px solid rgb(125,185,153);
+  border-image: linear-gradient(to bottom, rgba(108,219,141,0) 75%,rgb(62, 63, 62) 75%,rgb(55, 56, 55) 100%,rgba(108,219,141,0) 100%);
+  border-image-slice: 1;
+}

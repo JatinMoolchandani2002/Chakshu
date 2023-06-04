@@ -1,0 +1,10 @@
+{
+    "crimes":[
+        { "label": "Burglary", "value": "Burglary" },
+        { "label": "Pick Pocketing", "value": "Pick Pocketing" },
+        { "label": "Man Handling", "value": "Man Handling" },
+        { "label": "Murder", "value": "Murder" },
+        { "label": "Other", "value": "Other" }
+        
+    ]
+}
